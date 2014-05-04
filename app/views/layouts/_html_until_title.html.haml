@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+- if browser.mac? && browser.chrome?
+  <html class="no-js">  
+- if browser.mac? && browser.opera?
+  <html class="no-js macOpera">
+- if browser.mac? && browser.firefox?
+  <html class="no-js macFirefox">
+- if browser.mac? && browser.safari?
+  <html class="no-js macSafari">
+- if browser.windows? && browser.opera?
+  <html class="no-js windowsOpera">
+- if browser.windows? && browser.chrome?
+  <html class="no-js windowsChrome">
+- if browser.windows? && browser.safari?
+  <html class="no-js windowsSafari">
+- if browser.windows? && browser.firefox?
+  <html class="no-js windowsFirefox">
+- if browser.mobile?
+  <html class="no-js mobile">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Riyarchy: For a rational world.">
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+%title
+  - if !@html_title
+    Riyarchy
+  - else
+    = "#{@html_title}"

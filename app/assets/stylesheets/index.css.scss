@@ -1,0 +1,156 @@
+$clear-white: rgba(255,255,255,0.6);
+$purple: darken(#ccccff, 12%);
+$orange: lighten(#ffcc33, 7%);
+$border-black: #555;
+
+*, input {
+  font-family: "MS Sans Serif", Geneva, "Lucida Sans Unicode", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.border-box, div, form, p, a, footer, input, textarea, label {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(image_path("light_honeycomb.png")) repeat center center fixed; 
+}
+
+.app-section {
+  width: 1000px;
+  margin: 2.3em auto;
+  max-width: 96%;
+  background: $orange;
+  overflow: hidden;
+  border-radius: 30px;
+
+  .title-section {
+      background: lighten($orange, 15%);
+      color: darken($purple, 2%);
+      border-top: 0;
+      padding: 1em 1.5em;
+
+    h1 {
+      font-size: 2.5em;
+      display: inline-block;
+
+      a {
+        color: darken($purple, 2%);
+        font-family: tahoma, arial, sans-serif;
+      }
+    }
+
+    h2 {
+      display: inline-block;
+      margin-left: 0.8em;
+    }
+  }
+
+  p.intro {
+    width: 650px;
+    max-width: 90%;
+    margin: 1em auto 1.8em;
+    text-indent: 1.5em;
+    font-size: 1.15em;
+  }
+
+  .nav-links {
+    width: 20%;
+    display: inline-block;
+    float: left;
+    margin-top: 1em;
+
+    a {
+      display: block;
+      border-bottom: 1px solid #555;
+      padding: 0.25em 1.7em;
+      color: lightgreen;
+      background: black;
+
+      &:hover {
+        background: #444;
+      }      
+    }
+
+    p {
+      font-size: 0.85em;
+      margin-top: 2em;
+      margin-left: 1em;
+    }
+  }  
+
+  .content {
+    display: inline-block;
+    float: left;
+    width: 80%;
+
+    .products {
+      margin: 0 auto;
+      width: 95%;
+      max-width: 700px;
+
+      h2 {
+        line-height: 1;
+        font-size: 1.3em;
+        &:nth-of-type(2) {
+          margin-top: 1.6em;
+        }
+      }
+
+      .product {
+        margin: 1em auto;
+        border: 1px solid $orange;
+        padding: 1em;
+        background: $clear-white;
+        background: lighten($purple, 12%);
+        overflow: hidden;
+
+        img {
+          float: left;
+          width: 80px;
+        }
+
+        .content-section {
+          float: left;
+          width: calc(100% - 80px);
+          padding: 0 1em;
+
+          a {
+            font-size: 1.4em;
+            color: $purple;
+            font-weight: 500;
+            background: black;
+            color: lightgreen;
+            padding: 0.1em 0.25em;
+            margin-top: 1em;
+
+            &:hover {
+              background: #444;
+            }
+
+            span {
+              margin-left: 0em;
+            }
+          }
+
+          p {
+            margin: 0.5em 0.2em;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 4em 0 0em;
+    padding: 1.2em 0;
+    text-align: center;
+    background: lighten($orange, 20%);    
+
+    p, a {
+      display: inline-block;
+      font-size: 0.85em;
+      margin: 0 1.2em;
+    }
+  }
+}
