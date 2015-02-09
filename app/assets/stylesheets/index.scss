@@ -1,0 +1,169 @@
+body.index {
+  background: url(image_path("light_honeycomb.png")) repeat center center fixed;
+
+  *, input {
+    font-family: "MS Sans Serif", Geneva, "Lucida Sans Unicode", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .app-section {
+    width: 96%;
+    max-width: 1000px;
+    margin: 2.3em auto;
+    background: $orange;
+    overflow: hidden;
+    border-radius: 30px;
+    @media only screen and (max-width: 599px) {
+      margin: 2% auto;
+    }
+
+    .title-section {
+      background: lighten($orange, 15%);
+      color: darken($purple, 2%);
+      border-top: 0;
+      padding: 1.1em 1.5em 1em;
+
+      @media only screen and (max-width: 599px) {
+        text-align: center;
+        font-size: 1.1em;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        display: inline-block;
+
+        a {
+          color: darken($purple, 2%);
+          font-family: tahoma, arial, sans-serif;
+        }
+      }
+
+      h2 {
+        display: inline-block;
+        margin-left: 0.8em;
+        font-size: 1.1em;
+        @media only screen and (max-width: 599px) {
+          margin-left: 0.4em;
+        }
+      }
+    }
+
+    .nav-links {
+      width: 20%;
+      display: inline-block;
+      float: left;
+      margin-top: 1em;
+      @media only screen and (max-width: 599px) {
+        width: 100%;
+        margin-top: 0;
+      }
+
+      a {
+        display: block;
+        border-bottom: 1px solid #999;
+        padding: 0.25em 1.7em;
+        color: $purple;
+        background: darken(white, 5%);
+        @media only screen and (max-width: 599px) {
+          padding: 0.5em 1.6em;
+          width: 50%;
+          display: inline-block;
+          float: left;
+          border-top: 1px solid #999;
+          text-align: center;
+
+          &:first-of-type {
+            border-right: 1px solid #999;
+          }
+        }
+
+        &:hover {
+          background: darken(white, 10%);
+        }
+      }
+
+      p {
+        font-size: 0.8em;
+        margin-top: 2em;
+        margin-left: 1em;
+        @media only screen and (max-width: 599px) {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      display: inline-block;
+      float: left;
+      width: 80%;
+      @media only screen and (max-width: 599px) {
+        width: 100%;
+      }
+
+
+      p.intro {
+        max-width: 700px;
+        width: 95%;
+        margin: 1em auto 1.8em;
+      }
+
+      .products {
+        margin: 0 auto;
+        width: 95%;
+        max-width: 700px;
+
+        h2 {
+          line-height: 1;
+          font-size: 1.1em;
+          font-weight: 600;
+          &:nth-of-type(2) {
+            margin-top: 1.6em;
+          }
+        }
+
+        .product {
+          margin: 1em auto;
+          border: 1px solid $orange;
+          padding: 1em;
+          background: $clear-white;
+          background: lighten($purple, 15.5%);
+          overflow: hidden;
+          border-radius: 20px;
+
+          img {
+            float: left;
+            width: 80px;
+          }
+
+          .content-section {
+            float: left;
+            width: calc(100% - 80px);
+            padding: 0 1em;
+
+            a {
+              font-size: 1.1em;
+              color: $purple;
+              font-weight: 500;
+              background: black;
+              color: lightgreen;
+              padding: 0.1em 0.25em;
+              margin-top: 1em;
+
+              &:hover {
+                background: #444;
+              }
+
+              span {
+                margin-left: 0em;
+              }
+            }
+
+            p {
+              margin: 0.5em 0.2em;
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

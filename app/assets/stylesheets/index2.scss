@@ -1,0 +1,155 @@
+html {
+  height: 100%;
+}
+
+body.index2 {
+  $orange: darken(#ffcc33, 15%);
+  $background-white: rgba(255, 255, 255, 0.5);
+  background:
+    linear-gradient($background-white, $background-white),
+    url(image_path("light_honeycomb.png")) repeat center center fixed; 
+  height: 100%;
+  $title-padding: 1rem;
+  $title-border-width: 0.95rem;
+  $avenir-medium: "Avenir-Medium", "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  $avenir-light: "Avenir-Light", "Avenir-Medium", "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $avenir-medium;
+  width: 1000px;
+  height: 800px;
+
+  .title-section {
+    float: left;
+    height: 100%;
+    min-height: 820px;
+    width: 300px;
+    position: absolute;
+    padding: $title-padding;
+
+    .title {
+      border-left: $title-border-width solid $orange;
+      color: $orange;
+      height: 100%;
+      position: relative;
+
+      .headers {
+        position: absolute;
+        width: 800px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform-origin: left top 0;
+        -webkit-transform-origin: left top 0;
+        top: -0.28rem;
+        left: $title-padding*2 + $title-border-width;
+
+        h1 {
+          display: inline-block;
+          text-transform: uppercase;
+          line-height: 0.8;
+          font-size: 4rem;
+          display: inline-block;
+        }
+
+        h2 {
+          display: inline-block;
+          font-size: 1.7rem;
+          margin-left: 0.8rem;
+        }
+
+        a {
+          color: $orange;
+        }
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: $title-padding;
+      left: $title-border-width + $title-padding*1.8;
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p.copyright {
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        font-family: $avenir-light;
+      }
+    }
+  }
+
+  .content {
+    float: left;
+    height: 100%;
+    width: calc(100% - 100px);
+    padding: $title-padding 1.5rem;
+    padding-left: 8rem;
+
+    p.caption {
+      left: $title-border-width + $title-padding*1.5;
+      font-size: 1rem;
+    }
+
+    .products {
+      font-family: "MS Sans Serif", Geneva, "Lucida Sans Unicode", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding-top: 0.3rem;
+
+      h2 {
+        line-height: 1;
+        font-size: 1.1em;
+        font-weight: 600;
+        &:nth-of-type(2) {
+          margin-top: 1.6em;
+        }
+      }
+
+      .product {
+        margin: 1em 0;
+        border: 1px solid $orange;
+        padding: 1em;
+        background: $clear-white;
+        background: lighten($purple, 15.5%);
+        overflow: hidden;
+        border-radius: 20px;
+        max-width: 850px;
+
+        img {
+          float: left;
+          width: 80px;
+          border-radius: 20px;
+        }
+
+        .content-section {
+          float: left;
+          width: calc(100% - 80px);
+          padding: 0 1em;
+
+          a {
+            font-size: 1.1em;
+            color: $purple;
+            font-weight: 500;
+            background: black;
+            color: lightgreen;
+            padding: 0.1em 0.25em;
+            margin-top: 1em;
+            border-radius: 1px;
+
+            &:hover {
+              background: #444;
+            }
+
+            span {
+              margin-left: 0em;
+            }
+          }
+
+          p {
+            margin: 0.5em 0.2em;
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}

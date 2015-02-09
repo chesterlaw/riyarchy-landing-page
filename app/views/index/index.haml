@@ -1,19 +1,21 @@
+- @body_classes = :index
+
 .app-section
   .title-section
     %h1= link_to :Riyarchy, root_path
     %h2 For a rational world.
 
   .nav-links
-    = link_to :home, root_path
-    = mail_to "contact@riyarchy.com", :contact, class: "email"
+    = link_to :Home, root_path
+    = mail_to "contact@riyarchy.com", :Contact, class: "email"
 
     %p Riyarchy &copy; 2014
 
   .content
-    %p.intro Riyarchy works toward capturing the state of debates. We do this via web apps.
+    %p.intro Riyarchy works to remove irrationalities from the world. We have launched multiple efforts to this end.
 
     .products
-      %h2 Current Project:
+      %h2 Current:
       .product
         = link_to image_tag("crystaltower_logo.png"), "http://www.crystaltower.co"
         .content-section
@@ -22,7 +24,7 @@
             %span (2014)
           %p By enforcing a syllogism structure to all arguments submitted, refutations are made clear whether they are against a premise, or the logic of the argument.
 
-      %h2 Past Projects:
+      %h2 Past:
       .product
         = link_to image_tag("riyarchy_logo.png"), "http://www.debatewithme.com"
         .content-section
@@ -32,9 +34,9 @@
           %p Purposing the Riyarchy debate system for everyday users, people can use Riyarchy's system to host their own debates.
 
       .product
-        = link_to image_tag("riyarchy_logo.png"), "http://www.riyarchy.com"
+        = link_to image_tag("riyarchy_logo.png"), "http://www.riyarchy.com/intro"
         .content-section
-          = link_to "http://www.riyarchy.com" do
+          = link_to "http://www.riyarchy.com/intro" do
             Riyarchy
             %span (2012)
           %p The eponymous debut, the Riyarchy platform indexes arguments and their refutation arguments indefinitely. Through a cancelling out system, it is determined which arguments are undefeated.

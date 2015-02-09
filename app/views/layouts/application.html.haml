@@ -1,11 +1,5 @@
-= render partial: "layouts/html_until_title"
-
-= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-
-= render partial: "layouts/csrf_until_body"
+= render partial: "layouts/head"
 
 = yield
-
-= javascript_include_tag "application", "data-turbolinks-track" => true
 
 = render partial: "layouts/js_end"
